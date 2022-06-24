@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <title>Title</title>
+    <script>
+       function pageload(){
+           var text = "pageload = " + window.myMessage;
+           document.getElementById("msg").innerText = text;
+       }
+
+       function pageshow(){
+           var text = "pageshow = " + window.myMessage;
+           document.getElementById("msg2").innerText = text;
+       }
+
+       function pagefinish(){
+           var text = "pagefinish = " + window.myMessage;
+           document.getElementById("msg3").innerText = text;
+       }
+    </script>
+</head>
+<body onload="pageload()" onpageshow="pageshow()">
+    hello world <br/>
+    <span id="msg"></span><br/>
+    <span id="msg2"></span><br/>
+    <span id="msg3"></span><br/>
+</body>
+</html>
+
+<script>
+    pagefinish();
+</script>
